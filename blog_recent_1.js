@@ -17,23 +17,17 @@ const hadError = (err, res) => {
 
 const getTemplate = (titles, res) => {
   fs.readFile('./template.html', (err, data) => {
-    if (err) {
-      hadError(err, res);
-    } else {
-      const tmpl = data.toString();
-      formatHTML(titles, tmpl, res);
-    }
+    if (err) hadError(err, res);
+    const tmpl = data.toString();
+    formatHTML(titles, tmpl, res);
   });
 };
 
 const getTitles = (res) => {
   fs.readFile('./titles.json', (err, data) => {
-    if (err) {
-      hadError(err, res);
-    } else {
-      const titles = JSON.parse(data.toString());
-      getTemplate(titles, res);
-    }
+    if (err) hadError(err, res);
+    const titles = JSON.parse(data.toString());
+    getTemplate(titles, res);
   });
 };
 
