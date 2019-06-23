@@ -2,7 +2,9 @@
 const http = require('http');
 const fs = require('fs');
 
-http.createServer((req, res) => {
+const port = 8001;
+
+const server = http.createServer((req, res) => {
   if (req.url === '/') {
     fs.readFile('./titles.json', (err1, dataJson) => {
       if (err1) {
@@ -24,4 +26,8 @@ http.createServer((req, res) => {
       }
     });
   }
-}).listen(8000, '127.0.0.1');
+}).listen(port, '127.0.0.1', () => {
+  console.log(`Express starting on  ${port} http://localhost:${port} press ctrl + C for Exit`);
+});
+
+module.exports = server;
