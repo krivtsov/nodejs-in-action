@@ -1,0 +1,4 @@
+http://feeds.bbci.co.uk/news/rss.xml
+https://nodejs.org/en/feed/blog.xml
+http://lambda-the-ultimate.org/rss.xml
+https://news.yandex.ru/computers.rss
