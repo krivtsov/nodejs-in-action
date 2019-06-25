@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "async": "^3.1.0",
+    "express": "^4.17.1",
     "htmlparser": "^1.7.7",
     "request": "^2.88.0"
   }

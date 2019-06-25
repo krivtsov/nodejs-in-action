@@ -1,5 +1,13 @@
-// require('./blog_recent');
-// require('./blog_recent_1');
-// require('./echo_server');
-// require('./event_imitter');
-require('./chat');
+const express = require('express');
+
+const app = express();
+
+const port = process.nextTick.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.listen(port, () => {
+  console.log(`Express web app avaliable at http://localhost:${port}`);
+});
